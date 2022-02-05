@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="com.homepage1" template="/layouts/template.jsp">
+		<put-attribute name="title" value="Sample homepage" />
+		<put-attribute name="header" value="/tiles/header.jsp" />
+		<put-attribute name="menu" value="/tiles/menu.jsp" />
+		<put-attribute name="body" value="/views/index.jsp" />
+		<put-attribute name="footer" value="/tiles/footer.jsp" />
+	</definition>
+	<definition name="com.contactpage" extends="com.homepage1">
+		<put-attribute name="title" value="Spring Boot Tiles AJAX | Contact Form" />
+		<put-attribute name="body" value="/views/contact.jsp" />
+	</definition>
+
+
+	<definition name="com.homepage" template="/views/index.jsp">
+		<put-attribute name="title" value="AP-DRP | Welcome " />
+		<put-attribute name="body" value="/views/index.jsp" />
+	</definition>
+
+
+		<definition name="com.committees" template="/views/Committees.jsp">
+		<put-attribute name="title" value="AP-DRP | Committees " />
+		<put-attribute name="body" value="/views/Committees.jsp" />
+	</definition>
+	<definition name="com.goc" template="/views/goc.jsp">
+		<put-attribute name="title" value="AP-DRP | GOs Circulars " />
+		<put-attribute name="body" value="/views/goc.jsp" />
+	</definition>
+	<definition name="com.userManual" template="/views/userManual.jsp">
+		<put-attribute name="title" value="AP-DRP | userManual " />
+		<put-attribute name="body" value="/views/userManual.jsp" />
+	</definition>
+	<definition name="com.contactus" template="/views/contactus.jsp">
+		<put-attribute name="title" value="AP-DRP | ContactUs " />
+		<put-attribute name="body" value="/views/contactus.jsp" />
+	</definition>
+
+	<definition name="com.FormatsEntry" extends="com.homepage1">
+		<put-attribute name="title" value="AP-DRP | Format Entry " />
+		<put-attribute name="body" value="/forms/FormatsEntry.jsp" />
+	</definition>
+
+	<definition name="com.login" extends="com.homepage1">
+		<put-attribute name="title" value="AP-DRP | Format Entry " />
+		<put-attribute name="body" value="/views/login.jsp" />
+	</definition>
+	
+
+	<!-- <definition name="com.VacantLandDataEntry" extends="com.homepage1">
+		<put-attribute name="title" value="AP-DRP | VacantLandData Entry  " />
+		<put-attribute name="body" value="/forms/VacantLandDataEntry.jsp" />
+	</definition> -->
+
+	
+
+	<definition name="com.upload" extends="com.homepage1">
+		<put-attribute name="body" value="/views/SampleDesign.jsp" />
+	</definition>
+
+</tiles-definitions>
