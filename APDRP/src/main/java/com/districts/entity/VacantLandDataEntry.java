@@ -3,18 +3,32 @@ package com.districts.entity;
 import java.net.InetAddress;
 import java.sql.Timestamp;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.TypeDef;
+
+import com.vladmihalcea.hibernate.type.basic.Inet;
+import com.vladmihalcea.hibernate.type.basic.PostgreSQLInetType;
+
 @Entity
+
 @Table(name = "fixed_assets_vacant_lands")
+@TypeDef(
+	    name = "ipv4",
+	    typeClass = PostgreSQLInetType.class,
+	    defaultForType = Inet.class
+	)
 public class VacantLandDataEntry {
-	@Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int slno;                             
+@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	
+	private int slno;  
+	@Column(name="survery_no")
 	  private String survery_no;                         	
 	  private String total_land_extend;                  	
 	  private String encumbrance_free_land_extend;        	
@@ -69,12 +83,11 @@ public class VacantLandDataEntry {
 	public void setRevenue_district_id(String revenue_district_id) {
 		this.revenue_district_id = revenue_district_id;
 	}
-	public int getSlno() {
-		return slno;
-	}
-	public void setSlno(int slno) {
-		this.slno = slno;
-	}
+
+	/*
+	 * public int getSlno() { return slno; } public void setSlno(int slno) {
+	 * this.slno = slno; }
+	 */
 	public String getSurvery_no() {
 		return survery_no;
 	}

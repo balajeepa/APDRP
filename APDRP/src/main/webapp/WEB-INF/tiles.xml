@@ -50,10 +50,10 @@
 	</definition>
 	
 
-	<!-- <definition name="com.VacantLandDataEntry" extends="com.homepage1">
+	<definition name="com.VacantLandDataEntry" extends="com.homepage1">
 		<put-attribute name="title" value="AP-DRP | VacantLandData Entry  " />
 		<put-attribute name="body" value="/forms/VacantLandDataEntry.jsp" />
-	</definition> -->
+	</definition>
 
 	
 
