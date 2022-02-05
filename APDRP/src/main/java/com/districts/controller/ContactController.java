@@ -39,7 +39,7 @@ public class ContactController {
 	@Autowired
 	private ContactService contactService;
 	
-
+//second commit
 
 	//@RequestMapping(value = "/home", method = RequestMethod.GET)
 	   @GetMapping({"/", "/home"})
