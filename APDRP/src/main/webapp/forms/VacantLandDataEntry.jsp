@@ -14,7 +14,7 @@
  
   <body>
     <div class="container">
-        <form:form method="POST"    modelAttribute="vacantLandDataEntry"  >
+        <form:form method="POST"    modelAttribute="vacantLandDataEntry" action="/vacantlanddatasubmit" >
             <h2 class="form-signin-heading" style="text-align: center;">Department Vacant Land (only)</h2>
            <logic:equal value="FORM_ENTRY" name="SHOW_TYPE">
 
@@ -27,10 +27,6 @@
 							</label>
 							
 							 <form:input type="text" path="survery_no" class="form-control" placeholder="survey no" autofocus="true"/> 
-							 
-							
-							
-							
 						</div>
 						
 					</div>
@@ -265,7 +261,7 @@
 									</tr>
 								</thead>
 								<tbody id="addPlanTbody">
-									<logic:notEmpty name="Plan_uploads">
+									<logic:notEmpty name="Plan_uploads" path="Plan_uploads">
 										<logic:iterate id="map" name="Plan_uploads" indexId="i">
 											
 									<div>
@@ -327,7 +323,7 @@
 										<tr>
 											<td>1.</td>
 												<td><div>
-									<input type="file" name="file" /> 
+									<input type="file" name="files" /> 
 												<div class="plan1"></div></td>
 												<div class="photo1"></div></td>
 											<td></td>

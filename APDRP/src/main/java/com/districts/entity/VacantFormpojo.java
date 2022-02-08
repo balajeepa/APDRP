@@ -11,24 +11,16 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.TypeDef;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.vladmihalcea.hibernate.type.basic.Inet;
 import com.vladmihalcea.hibernate.type.basic.PostgreSQLInetType;
 
-@Entity
 
-@Table(name = "fixed_assets_vacant_lands")
-@TypeDef(
-	    name = "ipv4",
-	    typeClass = PostgreSQLInetType.class,
-	    defaultForType = Inet.class
-	)
-public class VacantLandDataEntry {
-@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+public class VacantFormpojo {
 	
 	private int slno;  
-	@Column(name="survery_no")
+	
 	  private String survery_no;                         	
                   
 	private int total_land_extend;                                        
@@ -48,7 +40,7 @@ public class VacantLandDataEntry {
 	private String village ;                                         
 	private int dept_id ;                                           
 	private String encumbrance_free_land_extend_scale;  
-	//private String Plan_uploads;
+	
 	
 	/*
 	 * public String getPlan_uploads() { return Plan_uploads; } public void
@@ -231,3 +223,4 @@ public class VacantLandDataEntry {
 	
 
 }
+

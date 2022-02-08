@@ -55,6 +55,11 @@
 		<put-attribute name="body" value="/forms/VacantLandDataEntry.jsp" />
 	</definition>
 
+	<definition name="com.FixedAssetsDataEntry" extends="com.homepage1">
+		<put-attribute name="title" value="AP-DRP | FixedAssetsData Entry  " />
+		<put-attribute name="body" value="/forms/FixedAssetsDataEntry.jsp" />
+	</definition>
+
 	
 
 	<definition name="com.upload" extends="com.homepage1">
